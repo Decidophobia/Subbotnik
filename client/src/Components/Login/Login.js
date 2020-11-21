@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {useDispatch} from 'react-redux';
 import {fetchLoginUserAC} from '../../redux/actionCreators';
-
+import styles from './Login.module.css'
 export const Login = () => {
 
 	const dispatch = useDispatch();
@@ -20,11 +20,13 @@ export const Login = () => {
 	};
 
 	return (
+    <div className={styles.loginBox}>
 		<form onSubmit={ handleSubmit }>
 			<h1>Login</h1>
 
 			<label>Email</label>
 			<input
+      className={styles.mainInput}
 				type='email'
 				ref={email}
 				placeholder='Username'
@@ -32,12 +34,15 @@ export const Login = () => {
 
 			<label>Password</label>
 			<input
+            className={styles.mainInput}
+
 				ref={password}
 				type='password'
 				name='password'
 				placeholder='Password'
 			/><br/>
-			<button type="submit">SignUp</button>
+			<button className={styles.registrationBtn} type="submit">Вход</button>
 		</form>
+    </div>
 	);
 };

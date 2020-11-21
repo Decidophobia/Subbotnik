@@ -1,4 +1,4 @@
-import {ADD_USER, LOGIN_USER} from './actionTypes';
+import {ADD_USER, LOGIN_USER, SEND_MESSAGE} from './actionTypes';
 
 // add user
 export const fetchAddUserAC = (payload) => {
@@ -71,6 +71,7 @@ export const fetchToProfileAC = () => {
 	};
 };
 
+
 // add polution
 
 export const fetchAddPolutionAC = (payload) => {
@@ -90,3 +91,11 @@ export const addPolutionAC = (payload) => ({
 	type: LOGIN_USER,
 	payload
 });
+
+
+export const sendMessageAC = (payload) => ({
+	type: SEND_MESSAGE,
+	payload
+});
+
+

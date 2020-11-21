@@ -4,6 +4,7 @@ module.exports = function (app) {
 	const morgan = require('morgan');
 	const passport = require('passport');
 	const cors = require('cors');
+
 	const authRoute = require('../routes/auth');
 	const polutionRoute = require('../routes/pollution');
 

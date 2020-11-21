@@ -1,4 +1,4 @@
-import {ADD_USER, LOGIN_USER} from './actionTypes';
+import {ADD_USER, LOGIN_USER, SEND_MESSAGE} from './actionTypes';
 
 // add user
 export const fetchAddUserAC = (payload) => {
@@ -68,4 +68,10 @@ export const fetchToProfileAC = () => {
 
 	};
 };
+
+
+export const sendMessageAC = (payload) => ({
+	type: SEND_MESSAGE,
+	payload
+});
 

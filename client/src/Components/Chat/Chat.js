@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { sendMessageAC } from "../../redux/actionCreators";
 import Message from "./Message";
 
-function Chat(props) {
+function Chat(room) {
   const [message, setMessage] = useState("");
   const dispatch = useDispatch();
   const chat = useSelector((store) => store.chat.messages);
@@ -14,13 +14,15 @@ function Chat(props) {
   };
   const sendMessage = () => {
     dispatch(sendMessageAC(message));
-    socket.emit("NEW_MESSAGE", message);
+    socket.emit("NEW_MESSAGE", message, room);
     setMessage("");
   };
   useEffect(() => {
     socket.on("NEW_MESSAGE:CLIENT", (message) => {
       dispatch(sendMessageAC(message));
     });
+    socket.emit("CONNECT_ROOM", room) 
+
   }, []);
   return (
     <div className="chat-container">

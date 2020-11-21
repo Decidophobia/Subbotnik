@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import {useDispatch} from 'react-redux';
 import {fetchAddUserAC} from '../../redux/actionCreators';
+import styles from './Signup.module.css'
 
 export const Signup = () => {
 
@@ -24,43 +25,31 @@ export const Signup = () => {
   };
 
   return (
-      <form onSubmit={ handleSubmit }>
-        <h1>Fill in to create an account</h1>
 
-        <label>Email</label>
-        <input required
-            type='email'
-            ref={ email }
-            placeholder='something@gmail.com'
-        />
-        <br/>
-
-        <label>Password</label>
-        <input required
-            type='password'
-            ref={ password }
-            placeholder='Insert your password here'
-        />
-        <br/>
-
-        <label>Name</label>
-        <input required
-            ref={ name }
-            placeholder='Your beautiful name'
-        />
-        <br/>
-
-        <label>Phone</label>
-        <input required
-        type='tel' 
+    <div className={styles.mainPage}>
+    <div className={styles.aboutUs}>
+      <h1>СУББОТНИК</h1>
+      <p className={styles.textAboutUs}>
+        — сознательный организованный бесплатный труд
+        на благо общества в свободное от работы время
+      </p>
+    </div>
+    <div className={styles.formBox}>
+      <form onSubmit={handleSubmit}>
+        <span>Зарегистрируйтесь</span>
+        <input required className={styles.mainInput} ref={ name } type="text" placeholder="Имя"/>
+        <input required type='email' ref={ email } className={styles.mainInput} type="email" placeholder="Email"/>
+        <input required type='password' ref={ password } className={styles.mainInput} type="password" placeholder="Пароль"/>
+        <input required className={styles.mainInput}   type='tel' 
         pattern='^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$'
-            ref={ phone }
-            placeholder='Phone number'
-        />
-        <br/>
-
-        <button type="submit">SignUp</button>
+            ref={ phone } type="text" placeholder="Телефон"/>
+        <button className={styles.registrationBtn} type="submit">Регистрация</button>
+        <button className={styles.loginBtn}>Войти</button>
       </form>
+     
+    </div>
+    </div> 
+    
   );
 
 };

@@ -3,7 +3,7 @@ module.exports = function (app) {
 	const express = require('express');
 	const morgan = require('morgan');
 	const passport = require('passport');
-	const  cors = require('cors')
+	const cors = require('cors')
 	const authRoute = require('../routes/auth');
 
 	// app.use(cors());

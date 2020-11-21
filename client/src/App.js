@@ -1,6 +1,5 @@
 import { Switch, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
-import AboutUs from "./Components/AboutUs/AboutUs";
 import { Signup } from "./Components/Signup/Signup";
 import { Login } from "./Components/Login/Login";
 import Chat from "./Components/Chat/Chat";

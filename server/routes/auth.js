@@ -24,7 +24,7 @@ router.post('/signup', async (req, res) => {
 				email: newUser.email,
 				userId: newUser._id
 			}, accessTokenSecret.jwt, {expiresIn: 60 * 60});
-			res.status(200).json({token: `Bearer ${ accessToken }`});
+			res.status(200).json({token: `Bearer ${ accessToken }`, name: newUser.name});
 		} else {
 			res.send('User already exists!');
 		}
@@ -44,7 +44,7 @@ router.post('/login', async (req, res) => {
 				email: user.email,
 				userId: user._id
 			}, accessTokenSecret.jwt, {expiresIn: 60 * 60});
-			res.status(200).json({token: `Bearer ${ accessToken }`});
+			res.status(200).json({token: `Bearer ${ accessToken }`, name: user.name});
 		} else {
 			res.status(401).json({message: 'Username or password incorrect'});
 		}

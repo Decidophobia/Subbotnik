@@ -14,6 +14,7 @@ export const fetchAddUserAC = (payload) => {
 			.then(result => {
 				dispatch(addUserAC({result}));
 				localStorage.setItem('token', JSON.stringify(result.token));
+				localStorage.setItem('name', JSON.stringify(result.name));
 			});
 	};
 };
@@ -37,6 +38,7 @@ export const fetchLoginUserAC = (payload) => {
 			.then(result => {
 				dispatch(loginUserAC({result}));
 				localStorage.setItem('token', JSON.stringify(result.token));
+				localStorage.setItem('name', JSON.stringify(result.name));
 			});
 	};
 };
@@ -70,8 +72,30 @@ export const fetchToProfileAC = () => {
 };
 
 
+// add polution
+
+export const fetchAddPolutionAC = (payload) => {
+	return () => {
+		fetch('/polution', {
+			method: 'POST',
+			headers: {
+				'Content-type': 'application/json'
+			},
+			body: JSON.stringify(payload)
+		});
+	};
+};
+
+
+export const addPolutionAC = (payload) => ({
+	type: LOGIN_USER,
+	payload
+});
+
+
 export const sendMessageAC = (payload) => ({
 	type: SEND_MESSAGE,
 	payload
 });
+
 

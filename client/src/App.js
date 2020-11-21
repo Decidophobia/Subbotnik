@@ -22,7 +22,10 @@ function App() {
           <Login />
         </Route>
         <Route path="/chat">
-          <Chat />
+          <Chat room={"room1"} />
+        </Route>
+        <Route path="/chat2">
+          <Chat room={"room2"} />
         </Route>
       </Switch>
     </>

@@ -13,6 +13,9 @@ function Navbar(props) {
         <Link to="/signup">Sign up</Link>
       </div>
       <div>
+        <Link to="/District">District</Link>
+      </div>
+      <div>
         <Link to="/login"> Sign in</Link>
       </div>
     </div>

@@ -7,6 +7,8 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import MapPage from './Components/Map/Map';
 import { YMaps } from 'react-yandex-maps';
+import District from './Components/District/District';
+
 function App() {
   return (
     <>
@@ -34,6 +36,9 @@ function App() {
           >
             <MapPage />
           </YMaps>
+        </Route>
+        <Route path="/district">
+          <District />
         </Route>
       </Switch>
     </>

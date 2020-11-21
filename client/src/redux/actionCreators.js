@@ -14,6 +14,7 @@ export const fetchAddUserAC = (payload) => {
 			.then(result => {
 				dispatch(addUserAC({result}));
 				localStorage.setItem('token', JSON.stringify(result.token));
+				localStorage.setItem('name', JSON.stringify(result.name));
 			});
 	};
 };
@@ -37,6 +38,7 @@ export const fetchLoginUserAC = (payload) => {
 			.then(result => {
 				dispatch(loginUserAC({result}));
 				localStorage.setItem('token', JSON.stringify(result.token));
+				localStorage.setItem('name', JSON.stringify(result.name));
 			});
 	};
 };

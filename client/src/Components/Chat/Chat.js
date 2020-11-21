@@ -1,15 +1,7 @@
-import React from "react";
-import socket from "../../socket";
+import React from 'react';
+
 function Chat(props) {
-  return (
-    <div className="chat-container">
-      <div className="chat-field"></div>
-      <div className="chat-massage">
-        <input name="massage-input" />
-        <button className="chat-button">отправить</button>
-      </div>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default Chat;

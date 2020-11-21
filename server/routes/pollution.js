@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Polution = require('../models/Polution');
 
 
-router.post('/addPolution', (req, res) => {
+router.post('/', (req, res) => {
 
 	console.log(req.body);
 	try {

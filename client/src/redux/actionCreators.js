@@ -71,3 +71,22 @@ export const fetchToProfileAC = () => {
 	};
 };
 
+// add polution
+
+export const fetchAddPolutionAC = (payload) => {
+	return () => {
+		fetch('/polution', {
+			method: 'POST',
+			headers: {
+				'Content-type': 'application/json'
+			},
+			body: JSON.stringify(payload)
+		});
+	};
+};
+
+
+export const addPolutionAC = (payload) => ({
+	type: LOGIN_USER,
+	payload
+});

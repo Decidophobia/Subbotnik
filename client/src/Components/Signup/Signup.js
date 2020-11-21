@@ -24,45 +24,12 @@ export const Signup = () => {
     dispatch(fetchAddUserAC(user));
   };
 
-  return (
-      // <form onSubmit={ handleSubmit }>
-      //   <h1>Sign Up For An Account</h1>
+  return 
 
-      //   <label>Email</label>
-      //   <input
-      //       type='email'
-      //       ref={ email }
-      //       placeholder='email'
-      //   />
-      //   <br/>
-
-      //   <label>Password</label>
-      //   <input
-      //       type='password'
-      //       ref={ password }
-      //       placeholder='Password'
-      //   />
-      //   <br/>
-
-      //   <label>Avatar</label>
-      //   <input
-      //       ref={ avatar }
-      //       placeholder='Avatar (URL)'
-      //   />
-      //   <br/>
-
-      //   <label>Bio</label>
-      //   <textarea
-      //       ref={ bio }
-      //       placeholder='Bio'
-      //   />
-      //   <br/>
-
-      //   <button type="submit">SignUp</button>
-      // </form>
+};
 
 
-<div className={styles.mainPage}>
+{/* <div className={styles.mainPage}>
 <div className={styles.aboutUs}>
   <h1>СУББОТНИК</h1>
   <p className={styles.textAboutUs}>
@@ -83,15 +50,4 @@ export const Signup = () => {
  
 </div>
 
-</div>
-
-
-
-
-
-
-  );
-
-};
-
-
+</div> */}

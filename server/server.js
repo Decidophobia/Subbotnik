@@ -1,22 +1,32 @@
-const express = require('express');
+const express = require("express");
 const app = express();
+
 const mongoose = require('mongoose');
 require('dotenv').config();
-const config = require('./middleware');
+
+const server = require("http").Server(app);
+const io = require("socket.io")(server);
+
+const configSocket = require("./config/socket");
+const config = require("./middleware");
+
 config(app);
+configSocket(io, app);
 
 const port = process.env.PORT || 4000;
 
 async function startServer() {
+
 	try {
 		await mongoose.connect(`mongodb+srv://cleaner:${process.env.DB_PASSWORD}@subbotnic.ldlmg.mongodb.net/test`, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		});
-		app.listen(port, () => console.log(`Server has been started at ${ port } port...`));
+		server.listen(port, () => console.log(`Server has been started at ${ port } port...`));
 	} catch (err) {
 		console.log(err);
 	}
+
 }
 
 startServer();

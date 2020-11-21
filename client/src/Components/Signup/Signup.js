@@ -7,8 +7,8 @@ export const Signup = () => {
   const dispatch = useDispatch();
   const email = useRef();
   const password = useRef();
-  const avatar = useRef();
-  const bio = useRef();
+  const name = useRef();
+  const phone = useRef();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -16,8 +16,8 @@ export const Signup = () => {
     const user = {
       email: email.current.value,
       password: password.current.value,
-      avatar: avatar.current.value,
-      bio: bio.current.value,
+     name: name.current.value,
+      phone: phone.current.value,
     };
 
     dispatch(fetchAddUserAC(user));
@@ -25,35 +25,37 @@ export const Signup = () => {
 
   return (
       <form onSubmit={ handleSubmit }>
-        <h1>Sign Up For An Account</h1>
+        <h1>Fill in to create an account</h1>
 
         <label>Email</label>
-        <input
+        <input required
             type='email'
             ref={ email }
-            placeholder='email'
+            placeholder='something@gmail.com'
         />
         <br/>
 
         <label>Password</label>
-        <input
+        <input required
             type='password'
             ref={ password }
-            placeholder='Password'
+            placeholder='Insert your password here'
         />
         <br/>
 
-        <label>Avatar</label>
-        <input
-            ref={ avatar }
-            placeholder='Avatar (URL)'
+        <label>Name</label>
+        <input required
+            ref={ name }
+            placeholder='Your beautiful name'
         />
         <br/>
 
-        <label>Bio</label>
-        <textarea
-            ref={ bio }
-            placeholder='Bio'
+        <label>Phone</label>
+        <input required
+        type='tel' 
+        pattern='^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$'
+            ref={ phone }
+            placeholder='Phone number'
         />
         <br/>
 

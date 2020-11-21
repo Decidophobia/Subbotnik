@@ -3,8 +3,9 @@ module.exports = function (app) {
 	const express = require('express');
 	const morgan = require('morgan');
 	const passport = require('passport');
-	const  cors = require('cors')
+	const cors = require('cors');
 	const authRoute = require('../routes/auth');
+	const polutionRoute = require('../routes/pollution');
 
 	// app.use(cors());
 	app.use(passport.initialize());
@@ -17,4 +18,5 @@ module.exports = function (app) {
 
 // routes
 	app.use('/auth', authRoute);
+	app.use('/addPolution', polutionRoute());
 };

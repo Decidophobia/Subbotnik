@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const Polution = require('../models/Polution');
+const Pollution = require('../models/Pollution');
 
 
 router.post('/', (req, res) => {
 
 	console.log(req.body);
 	try {
-		const polution = new Polution(req.body);
+		const pollution = new Pollution(req.body);
 		polution.save();
 
 		res.status(200).json();

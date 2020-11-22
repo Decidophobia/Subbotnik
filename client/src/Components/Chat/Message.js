@@ -1,8 +1,12 @@
 import React from "react";
-
-function Message({ oneMes }) {
-
-  return <div className="oneMessage">{oneMes}</div>;
+import styles from "./Message.module.css";
+function Message({ oneMes, username }) {
+  return (
+    <div className={styles.message}>
+      <div className={styles.authorMessage}>{username}:</div>
+      <div className={styles.messageText}>{oneMes}</div>
+    </div>
+  );
 }
 
 export default Message;

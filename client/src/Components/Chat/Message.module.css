@@ -1,0 +1,13 @@
+.message {
+  max-width: 90%;
+  background: #f7d285;
+  padding: 10px;
+  border-radius: 7px;
+  word-wrap: break-word;
+  margin-bottom: 15px;
+}
+.authorMessage {
+  color: #5c88c0;
+  font-weight: 700;
+  margin-bottom: 10px;
+}

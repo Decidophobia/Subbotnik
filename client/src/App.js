@@ -3,8 +3,6 @@ import Navbar from './Components/Navbar/Navbar';
 import { Signup } from './Components/Signup/Signup';
 import { Login } from './Components/Login/Login';
 import Chat from './Components/Chat/Chat';
-import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
 import MapPage from './Components/Map/Map';
 import { YMaps } from 'react-yandex-maps';
 import District from './Components/District/District';

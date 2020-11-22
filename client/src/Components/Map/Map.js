@@ -16,14 +16,11 @@ function MapPage(props) {
 
   //в этом стэйте массив с массивами координат
   const [placemarc, setPlaceMark] = useState([]);
-
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
   }
-
-
-	function openModal() {
+  function closeModal() {
 		setIsOpen(true);
 	}
 

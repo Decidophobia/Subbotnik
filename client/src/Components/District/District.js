@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function District() {
   return (
-    <>
+    <div className={styles.boxMapWrapper}>
       <div className={styles.boxMap}>
         <div className={styles.map}>
           <div className={styles.mapItem1}>
@@ -48,7 +48,7 @@ function District() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

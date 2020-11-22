@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 600px;
   padding: 0 15px;
-  max-height: 500px;
+  max-height: 800px;
 }
 .chatField {
   flex-grow: 1;
@@ -24,6 +24,14 @@
   text-indent: 6px;
   height: 30px;
   border-radius: 5px;
+  margin-right: 15px;
 }
 .chatButton {
+  background: #84c05c;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 3px;
 }

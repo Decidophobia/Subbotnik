@@ -29,8 +29,8 @@ function MapPage(props) {
     <>
       <div className={styles.containerWrap}>
         <Map
-          width={"600px"}
-          height={"500px"}
+          width={"1000px"}
+          height={"800px"}
           defaultState={{
             center: [59.94153469, 30.24667669],
             zoom: 13,

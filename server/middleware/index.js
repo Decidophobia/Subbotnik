@@ -19,5 +19,5 @@ module.exports = function (app) {
 
 // routes
 	app.use('/auth', authRoute);
-	app.use('/addPollution', pollutionRoute);
+	app.use('/pollution', pollutionRoute);
 };

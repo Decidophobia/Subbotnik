@@ -5,6 +5,8 @@ import { Login } from './Components/Login/Login';
 import Chat from './Components/Chat/Chat';
 import MapPage from './Components/Map/Map';
 import { YMaps } from 'react-yandex-maps';
+import District from './Components/District/District';
+
 function App() {
   return (
     <>
@@ -32,6 +34,9 @@ function App() {
           >
             <MapPage />
           </YMaps>
+        </Route>
+        <Route path="/district">
+          <District />
         </Route>
       </Switch>
     </>

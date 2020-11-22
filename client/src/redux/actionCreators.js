@@ -67,7 +67,6 @@ export const fetchToProfileAC = () => {
 		} else {
 			console.log('token not found');
 		}
-
 	};
 };
 
@@ -89,7 +88,6 @@ export const fetchAddPollutionAC = (payload) => {
 			.then(data => console.log(data));
 	};
 };
-
 
 export const addPollutionAC = (payload) => ({
 	type: ADD_POLLUTION,

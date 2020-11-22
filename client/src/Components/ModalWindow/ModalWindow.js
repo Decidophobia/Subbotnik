@@ -29,20 +29,17 @@ function ModalWindow(props) {
 
     const image = await res.json();
     setUrlImage(image.url);
-
-    console.log(urlImage);
   };
 
   const getDataFromForm = (event) => {
     event.preventDefault();
-    console.log(description.current.value);
 
     const pollution = {
       description: description.current.value,
       photo: urlImage,
+      coord: props.placemarc,
     };
     dispatch(fetchAddPollutionAC(pollution));
-    console.log(pollution);
   };
 
   return (
@@ -58,10 +55,7 @@ function ModalWindow(props) {
               name="file"
               placeholder="Загрузите фотографию"
             />
-            <button
-              className={styles.close}
-              onClick={props.closeModal}
-            >
+            <button className={styles.close} onClick={props.closeModal}>
               X
             </button>
             {/*	</form>*/}

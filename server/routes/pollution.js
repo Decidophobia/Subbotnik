@@ -10,6 +10,7 @@ router.post('/', async (req, res) => {
 		const pollution = new Pollution(req.body);
 		await pollution.save();
 
+
 		res.status(200).json(pollution);
 	} catch (err) {
 		res.status(404).json('Error!');

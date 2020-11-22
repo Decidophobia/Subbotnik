@@ -1,30 +1,32 @@
-.modalWind{
-  width: 900px;
+.modalWind {
+  width: 100%;
   height: 500px;
   background-color: rgba(255, 255, 255, 0);
   border: none;
   outline: none;
-
 }
-.donwloadform{
+.donwloadform {
   padding: 3px;
   margin: 6px;
   width: 400px;
 }
-.saveform{
+.saveform {
   padding: 3px;
   margin: 6px;
   width: 400px;
   position: relative;
   top: -13px;
 }
-.contener{
+.contener {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  position: relative;
-  left: 100px;
-  top: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   border: none;
   outline: none;
   width: 400px;
@@ -32,16 +34,16 @@
   background-color: rgba(132, 193, 93, 0.4);
   border-radius: 10px 10px 10px 10px;
 }
-.inpdonwload{
+.inpdonwload {
   width: 260px;
   height: 20px;
   border: none;
   outline: none;
   border-radius: 0 25px 25px 0;
   box-shadow: 0 0 2px #6c8a5c;
-  background-color: #FEFAEF;
+  background-color: #fefaef;
 }
-.close{
+.close {
   left: 17px;
   top: -14.5px;
   width: 35px;
@@ -50,55 +52,55 @@
   border: none;
   outline: none;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0) ;
+  background-color: rgba(255, 255, 255, 0);
   color: #307113;
 }
-.btngreen{
+.btngreen {
   position: relative;
   height: 21px;
   width: 70px;
   border: none;
   outline: none;
-  background-color: #84C05D;
+  background-color: #84c05d;
   box-shadow: 0 0 2px #6c8a5c;
-  color: #307113; 
+  color: #307113;
   font-size: 6pt;
 }
-.donwload{
+.donwload {
   position: relative;
   height: 22px;
   width: 70px;
   border: none;
   outline: none;
-  background-color: #84C05D;
+  background-color: #84c05d;
   box-shadow: 0 0 2px #6c8a5c;
-  color: #307113; 
+  color: #307113;
   font-size: 6pt;
   right: -1.5px;
   top: -1.3px;
   border-radius: 25px 0 0 25px;
 }
 
-.save{
+.save {
   position: relative;
   height: 21px;
   width: 70px;
   border: none;
   outline: none;
-  background-color: #84C05D;
+  background-color: #84c05d;
   box-shadow: 0 0 2px #6c8a5c;
-  color: #307113; 
+  color: #307113;
   font-size: 6pt;
   border-radius: 25px 25px 25px 25px;
   top: 8px;
 }
 
-.textdescription{
+.textdescription {
   width: 378px;
   height: 100px;
   border: none;
   outline: none;
-  background-color: #FEFAEF;
+  background-color: #fefaef;
   box-shadow: 0 0 2px #6c8a5c;
   border-radius: 10px 10px 10px 10px;
   resize: none;

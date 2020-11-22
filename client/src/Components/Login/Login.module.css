@@ -1,0 +1,57 @@
+.loginBox {
+  margin-left: 40px;
+  margin-top: 100px;
+  width: 330px;
+  background-color: rgba(132, 193, 93, 0.4);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #307113;
+  border-radius: 10px 10px 10px 10px;
+  padding: 25px;
+  align-self: flex-start;
+}
+.formBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 290px;
+  height: 310px;
+}
+
+.registrationBtn {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #84c05d;
+  box-shadow: 0 0 2px #6c8a5c;
+  color: #307113;
+  border-radius: 5px 5px 5px 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 24px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.registrationBtn:hover {
+  color: #ffffff;
+  box-shadow: 0px 0px 3px #000000;
+  transition: 0.4s;
+}
+.mainInput {
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 0 2px #6c8a5c;
+  background-color: #fefaef;
+}
+
+::placeholder {
+  color: rgba(132, 193, 93, 0.4);
+}
+label {
+  margin-top: 10px;
+  display: block;
+}

@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("./субботник_задник_1-страница.jpg") no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.mainPage {
+  margin-top: 60px;
+  width: 550px;
+  max-height: 400px;
+  background-color: rgba(132, 193, 93, 0.4);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #307113;
+  border-radius: 10px 10px 10px 10px;
+  align-self: flex-start;
+  padding: 10px 15px 25px;
+}
+.formBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.aboutUs {
+  padding-left: 10px;
+}
+.textAboutUs {
+  font-size: 18px;
+}
+
+.registrationBtn {
+  height: 35px;
+  width: 300px;
+  border: none;
+  outline: none;
+  background-color: #84c05d;
+  box-shadow: 0 0 2px #6c8a5c;
+  color: #307113;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+
+.loginBtn {
+  height: 35px;
+  width: 200px;
+  border: none;
+  outline: none;
+  background-color: #fefaef;
+  box-shadow: 0 0 2px #6c8a5c;
+  color: #307113;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.mainInput {
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 0 2px #6c8a5c;
+  background-color: #fefaef;
+}
+
+::placeholder {
+  color: rgba(132, 193, 93, 0.4);
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}

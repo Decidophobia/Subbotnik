@@ -13,24 +13,24 @@ import Chat from '../Chat/Chat';
 Modal.setAppElement('#root');
 
 function MapPage(props) {
+
   //в этом стэйте массив с массивами координат
   const [placemarc, setPlaceMark] = useState([]);
-
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
   }
-
   function closeModal() {
-    setIsOpen(false);
-  }
+		setIsOpen(true);
+	}
+
 
   return (
     <>
       <div className={styles.containerWrap}>
         <Map
-          width={'600px'}
-          height={'500px'}
+          width={"1000px"}
+          height={"800px"}
           defaultState={{
             center: [59.94153469, 30.24667669],
             zoom: 13,
@@ -91,6 +91,7 @@ function MapPage(props) {
       </div>
     </>
   );
+
 }
 
 export default MapPage;

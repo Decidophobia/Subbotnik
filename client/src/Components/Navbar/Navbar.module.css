@@ -1,0 +1,14 @@
+.navbarContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 450px;
+  top: 0%;
+  left: 0;
+}
+.navbarContainer .navbarItem {
+  padding: 40px 15px;
+  text-align: center;
+  font-size: 2.5rem;
+}

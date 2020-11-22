@@ -1,15 +1,16 @@
 const router = require('express').Router();
-const Polution = require('../models/Polution');
+const Pollution = require('../models/Pollution');
 
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
 
 	console.log(req.body);
-	try {
-		const polution = new Polution(req.body);
-		polution.save();
 
-		res.status(200).json();
+	try {
+		const pollution = new Pollution(req.body);
+		await pollution.save();
+
+		res.status(200).json(pollution);
 	} catch (err) {
 		res.status(404).json('Error!');
 

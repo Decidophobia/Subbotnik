@@ -8,7 +8,6 @@ function ModalWindow(props) {
 	const dispatch = useDispatch();
 	const description = useRef();
 
-
 	const [loading, setLoading] = useState(false);
 	const [urlImage, setUrlImage] = useState('');
 
@@ -28,23 +27,17 @@ function ModalWindow(props) {
 
 		const image = await res.json();
 		setUrlImage(image.url);
-
-		console.log(urlImage);
-
 	};
 
 	const getDataFromForm = (event) => {
 		event.preventDefault();
-		console.log(description.current.value);
-
 
 		const pollution = {
 			description: description.current.value,
-			photo: urlImage
+			photo: urlImage,
+			coord: props.placemarc
 		};
-		dispatch(fetchAddPollutionAC(pollution))
-		console.log(pollution);
-
+		dispatch(fetchAddPollutionAC(pollution));
 	};
 
 	return (
@@ -56,18 +49,18 @@ function ModalWindow(props) {
 						<input onChange={ uploadImage } className={ styles.inpdonwload } type="file" name="file"
 							   placeholder="Загрузите фотографию"/>
 						<button className={ styles.close } onClick={ props.closeModal }>X</button>
-				{/*	</form>*/}
-				{/*</div>*/}
-				{/*<div className={ styles.saveform }>*/}
-					{/*<form>*/}
+						{/*	</form>*/ }
+						{/*</div>*/ }
+						{/*<div className={ styles.saveform }>*/ }
+						{/*<form>*/ }
 
-            <textarea
-				className={ styles.textdescription }
-				ref={ description }
-				cols="30"
-				rows="5"
-				placeholder="Введите описание..."
-			/>
+						<textarea
+							className={ styles.textdescription }
+							ref={ description }
+							cols="30"
+							rows="5"
+							placeholder="Введите описание..."
+						/>
 						<button type='submit' className={ styles.save }>Cохранить</button>
 					</form>
 				</div>

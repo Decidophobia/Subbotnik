@@ -13,6 +13,7 @@ import Chat from "../Chat/Chat";
 Modal.setAppElement("#root");
 
 function MapPage(props) {
+
   //в этом стэйте массив с массивами координат
   const [placemarc, setPlaceMark] = useState([]);
 
@@ -21,9 +22,11 @@ function MapPage(props) {
     setIsOpen(true);
   }
 
-  function closeModal() {
-    setIsOpen(false);
-  }
+
+	function openModal() {
+		setIsOpen(true);
+	}
+
 
   return (
     <>
@@ -87,6 +90,7 @@ function MapPage(props) {
       </div>
     </>
   );
+
 }
 
 export default MapPage;

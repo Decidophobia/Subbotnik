@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
+import React, { useState } from "react";
+import Modal from "react-modal";
 import {
   Map,
   Placemark,
   Clusterer,
   GeolocationControl,
-} from 'react-yandex-maps';
-import ModalWindow from '../ModalWindow/ModalWindow.js'
-import styles from './Map.module.css'
+} from "react-yandex-maps";
+import ModalWindow from "../ModalWindow/ModalWindow.js";
+import styles from "./Map.module.css";
+import Chat from "../Chat/Chat";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 function MapPage(props) {
-  //в этом стэйте массив с массивами координат 
+  //в этом стэйте массив с массивами координат
   const [placemarc, setPlaceMark] = useState([]);
-
 
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
@@ -25,30 +25,30 @@ function MapPage(props) {
     setIsOpen(false);
   }
 
-  return( 
-  <>
-   <div>
+  return (
+    <>
+      <div className={styles.containerWrap}>
         <Map
-          width={'600px'}
-          height={'500px'}
+          width={"600px"}
+          height={"500px"}
           defaultState={{
             center: [59.94153469, 30.24667669],
             zoom: 13,
-            controls: ['zoomControl', 'fullscreenControl'],
+            controls: ["zoomControl", "fullscreenControl"],
           }}
           onContextmenu={(e) => {
-            // этот таймаут открывает модальное окно. 
+            // этот таймаут открывает модальное окно.
             setTimeout(() => {
-              return openModal()
-            }, 500)
+              return openModal();
+            }, 500);
             //в coords прилетает масив с координатами.
-            const coords = e.get('coords');
+            const coords = e.get("coords");
             return setPlaceMark((prev) => [...prev, coords]);
           }}
         >
           <Clusterer
             options={{
-              preset: 'islands#invertedVioletClusterIcons',
+              preset: "islands#invertedVioletClusterIcons",
               groupByCoordinates: false,
             }}
           >
@@ -59,31 +59,33 @@ function MapPage(props) {
                   key={index}
                   geometry={coordinates}
                   properties={{
-                    iconContent: 'Грязюка',
+                    iconContent: "Грязюка",
                     balloonContentHeader:
                       '<span class="description">Ваша отметка</span>',
                     balloonContentBody: `Туть грязно`,
                   }}
                   options={{
-                    preset: 'islands#redStretchyIcon',
+                    preset: "islands#redStretchyIcon",
                     // draggable: true,
                   }}
                 />
               ))}
           </Clusterer>
-          <GeolocationControl options={{ float: 'left' }} />
+          <GeolocationControl options={{ float: "left" }} />
         </Map>
+        <Chat />
       </div>
+
       <div>
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           className={styles.modalWind}
-        >        
-           <ModalWindow closeModal={closeModal}  />
+        >
+          <ModalWindow closeModal={closeModal} />
         </Modal>
       </div>
-  </>
+    </>
   );
 }
 

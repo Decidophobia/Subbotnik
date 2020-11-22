@@ -36,7 +36,7 @@ function MapPage(props) {
             zoom: 13,
             controls: ["zoomControl", "fullscreenControl"],
           }}
-          onContextmenu={(e) => {
+          onClick={(e) => {
             // этот таймаут открывает модальное окно.
             setTimeout(() => {
               return openModal();

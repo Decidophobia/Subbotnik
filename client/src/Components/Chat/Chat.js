@@ -8,7 +8,7 @@ function Chat(room) {
   const [message, setMessage] = useState("");
   const dispatch = useDispatch();
   const chat = useSelector((store) => store.chat.messages);
-
+  const username = localStorage.getItem("name");
   const messageText = (e) => {
     setMessage(e.target.value);
   };
@@ -21,14 +21,13 @@ function Chat(room) {
     socket.on("NEW_MESSAGE:CLIENT", (message) => {
       dispatch(sendMessageAC(message));
     });
-    socket.emit("CONNECT_ROOM", room) 
-
+    socket.emit("CONNECT_ROOM", room);
   }, []);
   return (
     <div className="chat-container">
       <div className="chat-field">
         {chat &&
-          chat.map((oneMes, i) => <Message oneMes={oneMes} key={oneMes + i} />)}
+          chat.map((oneMes, i) => <Message oneMes={oneMes} key={oneMes + i} username={username}/>)}
       </div>
       <div className="chat-massage">
         <input name="massage-input" value={message} onChange={messageText} />

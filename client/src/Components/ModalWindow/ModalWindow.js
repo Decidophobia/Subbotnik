@@ -31,7 +31,7 @@ function ModalWindow(props) {
     setUrlImage(image.url);
   };
 
-  const getDataFromForm = (event) => {
+  const getDataFromForm = async (event) => {
     event.preventDefault();
 
     const pollution = {
@@ -39,7 +39,9 @@ function ModalWindow(props) {
       photo: urlImage,
       coord: props.placemarc,
     };
-    dispatch(fetchAddPollutionAC(pollution));
+    await dispatch(fetchAddPollutionAC(pollution));
+    console.log(pollution);
+    props.closeModal();
   };
 
   return (

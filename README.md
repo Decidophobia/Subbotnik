@@ -1,2 +1,0 @@
-# subbotnic
-group project
